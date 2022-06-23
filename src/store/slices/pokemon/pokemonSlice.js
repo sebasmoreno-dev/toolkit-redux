@@ -11,6 +11,8 @@ export const pokemonSlice = createSlice({
         startLoadingPokemos: (state, /* action */ ) => {
             state.isLoading = true;
         },
+        /* A reducer function. It is a function that takes in the current state and an action and
+        returns a new state. */
         setPokemons: (state, action) => {
             state.isLoading = false;
             state.page = action.payload.page;

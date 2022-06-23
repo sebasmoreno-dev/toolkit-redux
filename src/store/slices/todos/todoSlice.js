@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+/* Creating a slice of state. */
 export const templateSlice = createSlice({
     name: 'name',
     initialState: {
@@ -7,7 +8,6 @@ export const templateSlice = createSlice({
     },
     reducers: {
         increment: (state, /* action */ ) => {
-            
             state.counter += 1;
         },
     }

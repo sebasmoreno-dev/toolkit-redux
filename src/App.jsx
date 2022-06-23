@@ -5,8 +5,10 @@ import { decrement, increment, incrementByAmount } from './store/slices/counter/
 
 function App() {
   
+  /* Destructuring the counter from the state. */
   const { counter } = useSelector( state => state.counter)
 
+ /* A hook that gives access to the dispatch function. */
   const  dispatch = useDispatch();
 
   return (

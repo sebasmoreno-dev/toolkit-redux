@@ -6,9 +6,11 @@ import { getPokemons } from "./store/slices/pokemon/thunks";
 export const PokemonApp = () => {
 
 
+  /* Getting the state from the redux store. */
   const dispatch = useDispatch();
   const { pokemons = [], isLoading, page } = useSelector(state => state.pokemons);
 
+ /* A hook that is called when the component is mounted. */
   useEffect(() => {
     dispatch(getPokemons());
   },[]);
