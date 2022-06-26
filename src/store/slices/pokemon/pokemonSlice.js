@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+/* Creating a slice of the state. */
 export const pokemonSlice = createSlice({
     name: 'pokemon',
     initialState: {
@@ -7,6 +8,7 @@ export const pokemonSlice = createSlice({
         pokemons: [],
         isLoading: false,
     },
+    /* Creating the reducers for the state. */
     reducers: {
         startLoadingPokemos: (state, /* action */ ) => {
             state.isLoading = true;
