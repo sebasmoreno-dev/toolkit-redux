@@ -7,9 +7,14 @@ export const TodoApp = () => {
   
   // console.log(todo);
 
+  /* A React Hook that is used to manage state in a functional component. */
   const [todoId, setTodoId] = useState(1);
+  /* Destructuring the data from the useGetTodoByIdQuery hook. */
   const { data: todo, isLoading } = useGetTodoByIdQuery(todoId);
 
+  /**
+   * If the todoId is greater than 1, then subtract 1 from the todoId, otherwise, do nothing.
+   */
   const nextTodoId = () => {
     setTodoId(todoId + 1);
   }

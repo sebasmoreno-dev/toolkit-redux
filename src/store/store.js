@@ -8,6 +8,7 @@ export const store = configureStore({
     counter: counterSlice.reducer,
     pokemons: pokemonSlice.reducer,
 
+    /* Adding the reducer and middleware to the store. */
     [todosApi.reducerPath]: todosApi.reducer,
   },
   middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(todosApi.middleware)

@@ -3,11 +3,14 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const todosApi = createApi({
   reducerPath: "todos",
 
+  /* Setting the base url for all the queries in this api. */
   baseQuery: fetchBaseQuery({
     baseUrl: "https://jsonplaceholder.typicode.com",
   }),
 
+  /* Creating the endpoints for the api. */
   endpoints: (builder) => ({
+
     getTodos: builder.query({
       query: () => "/todos",
     }),
@@ -18,6 +21,7 @@ export const todosApi = createApi({
   }),
 });
 
+/* Exporting the hooks that we can use to make the queries. */
 export const { useGetTodosQuery, useGetTodoByIdQuery } = todosApi;
 
-//redux-rtq snippet hacer
+//TODO:redux-rtq snippet hacer
